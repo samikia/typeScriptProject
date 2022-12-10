@@ -30,7 +30,7 @@ if(!img_url){
     return alert('Please enter your image url')
 }
 setPeople([...people,{
-    id:2,
+    id:Math.floor(Math.random()*1000000),
     fullName,
     age:Number(age),
     img_url,
