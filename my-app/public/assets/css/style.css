@@ -18,6 +18,6 @@ body {
 }
 
 .operation_btns {
-  position: absolute;
+  position: flex;
   left: 0;
 }

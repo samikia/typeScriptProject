@@ -2,7 +2,7 @@ import { useState } from "react";
 import AddPeople from "./components/addPeople";
 import List from "./components/list";
 export interface IPeople{
-  id?:number;
+  id:number;
   fullName?:string;
   age?:number;
   img_url?:string;
@@ -20,7 +20,7 @@ const App = ()=> {
   return (
     <div className="container">
      <h4 className="alert alert-info">People management</h4>
-    <List people={people} />
+    <List people={people} setPeople={setPeople}/>
     <AddPeople people={people} setPeople={setPeople}/>
     </div>
   );
