@@ -1,6 +1,7 @@
 import { Dispatch, FC, SetStateAction } from "react";
 import { IPeople } from "../App";
 import {AiOutlineUserDelete} from 'react-icons/ai'
+import Edit from "./edit";
 interface IProps {
   people: IPeople[];
   setPeople:Dispatch<SetStateAction<IPeople[]>>
@@ -25,12 +26,13 @@ setPeople(filteredPeople)
         <div className="me-3">
           <p>
             <span className="h2">{person.fullName}</span>
-            <span className="badge bg-primary me-3">{person.age} سال </span>
+            <span className="badge bg-primary me-3 m-3">{person.age} سال </span>
           </p>
           <p className="text-muted">{person.bio}</p>
         </div>
       </div>
       <div className="operation_btns">
+        <Edit person={person} people={people} setPeople={setPeople}/>
         <AiOutlineUserDelete
           className="text-danger m-1"
           size={30}
